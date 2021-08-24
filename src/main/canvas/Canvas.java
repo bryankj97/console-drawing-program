@@ -57,7 +57,7 @@ public final class Canvas {
         }
     }
 
-    public void printCanvas() {
+    public String getCanvas() {
         StringBuilder sb = new StringBuilder();
         for(int y = 0; y < this.height; y++) {
             for(int x = 0; x < this.width; x++) {
@@ -69,7 +69,7 @@ public final class Canvas {
             }
             sb.append("\n");
         }
-        System.out.print(sb.toString().trim());
+        return sb.toString().trim();
     }
 
 }

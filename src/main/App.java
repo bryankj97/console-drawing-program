@@ -39,19 +39,19 @@ public class App {
             switch(c) {
                 case 'C':
                     this.canvas = new Canvas(executable_params);
-                    canvas.printCanvas();
+                    System.out.println(canvas.getCanvas());
                     break;
                 case 'L':
                     Line.createShape(canvas, executable_params);
-                    canvas.printCanvas();
+                    System.out.println(canvas.getCanvas());
                     break;
                 case 'R':
                     Rectangle.createShape(canvas, executable_params);
-                    canvas.printCanvas();
+                    System.out.println(canvas.getCanvas());
                     break;
                 case 'B':
                     DrawUtils.bucketFill(canvas, Integer.parseInt(executable_params[0]), Integer.parseInt(executable_params[1]), executable_params[2].charAt(0));
-                    canvas.printCanvas();
+                    System.out.println(canvas.getCanvas());
                     break;
                 default:
                     throw new IllegalCommandException("Command not recognised, Try again with C, L, R or B");
