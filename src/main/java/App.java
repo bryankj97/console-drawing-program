@@ -57,7 +57,7 @@ public class App {
                     throw new IllegalCommandException("Command not recognised, Try again with C, L, R or B");
             }
         } catch (ArrayIndexOutOfBoundsException e) {
-            throw new IllegalCommandException("Incorrect number of parameters provided. Check command...");
+            throw new IllegalCommandException("Too little number of parameters provided. Check command...");
         }
 
     }

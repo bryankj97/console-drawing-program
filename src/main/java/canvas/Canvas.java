@@ -37,8 +37,12 @@ public final class Canvas {
         return this.width;
     }
 
-    public char getCoordinate(int x, int y) {
-        return this.canvas[y][x];
+    public char getCoordinate(int x, int y) throws OutOfCanvasException {
+        try {
+            return this.canvas[y][x];
+        } catch (ArrayIndexOutOfBoundsException e) {
+            throw new OutOfCanvasException("Point selected is out of canvas and is invalid.");
+        }
     }
 
     public void shadeCanvas(int x, int y, char symbol) throws OutOfCanvasException {
