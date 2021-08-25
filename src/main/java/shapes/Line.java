@@ -15,9 +15,13 @@ public class Line implements Shape {
         int y1 = Integer.parseInt(arguments[1]);
         int x2 = Integer.parseInt(arguments[2]);
         int y2 = Integer.parseInt(arguments[3]);
+
+        // if shape lies on border, do not draw
         if (isBorder(canvas, x1, y1, x2, y2)) {
             throw new IllegalDimensionException("Line cannot be drawn on border");
         }
+
+        // for a valid line, it should be created in a left to right or up to down manner
         if((x1 == x2 && y1 < y2) || (y1 == y2 && x1 < x2)) {
             DrawUtils.drawLine(canvas, x1, y1, x2, y2, 'x');
         } else {
