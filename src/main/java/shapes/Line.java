@@ -8,7 +8,7 @@ import exception.OutOfCanvasException;
 public class Line implements Shape {
     
     public static void createShape(Canvas canvas, String []arguments) throws IllegalDimensionException, NoCanvasException, OutOfCanvasException {
-        if (canvas.isValidCanvas() == false) {
+        if (!canvas.isValidCanvas()) {
             throw new NoCanvasException("No canvas instantiated. Create canvas before drawing!");
         }
         int x1 = Integer.parseInt(arguments[0]);
